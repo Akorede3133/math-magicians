@@ -133,8 +133,8 @@ npm test
 
 👤 *Akorede*
 
-- GitHub: [Joy](https://github.com/Akorede3133)
-- Twitter: [Joy](https://twitter.com/SaheedAkorede7)
+- GitHub: [Akorede](https://github.com/Akorede3133)
+- Twitter: [Akorede](https://twitter.com/SaheedAkorede7)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
