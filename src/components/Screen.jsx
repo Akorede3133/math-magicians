@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
-const Screen = () => (
+const Screen = ({ value }) => (
   <div className=" w-full bg-slate-600 h-16 flex justify-end items-center text-white p-4 text-2xl">
-    0
+    {value}
   </div>
 );
 
