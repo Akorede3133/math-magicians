@@ -3,7 +3,6 @@ import Button from './Button';
 import data from '../data';
 import Screen from './Screen';
 import calculate from '../logic/calculate';
-// import operate from '../logic/operate';
 
 const Calculator = () => {
   const [calcObj, setCalcObj] = useState({
