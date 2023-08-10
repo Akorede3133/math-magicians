@@ -14,9 +14,8 @@ const Calculator = () => {
     const newObj = calculate(calcObj, buttonName);
     setCalcObj(newObj);
   };
-
   return (
-    <div className=" w-[90%] md:w-[500px] mx-auto">
+    <div className=" w-[90%] md:w-[400px] mx-auto">
       <Screen value={calcObj.next || (calcObj.total || '0')} />
       <div className="grid grid-cols-4">
         {
