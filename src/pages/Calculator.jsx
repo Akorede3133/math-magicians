@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Button from './Button';
+import Button from '../components/Button';
 import data from '../data';
-import Screen from './Screen';
+import Screen from '../components/Screen';
 import calculate from '../logic/calculate';
 
 const Calculator = () => {
@@ -15,7 +15,7 @@ const Calculator = () => {
     setCalcObj(newObj);
   };
   return (
-    <div className=" w-[90%] md:w-[400px] mx-auto">
+    <div className=" w-[90%] md:w-[400px] mx-auto py-5">
       <Screen value={calcObj.next || (calcObj.total || '0')} />
       <div className="grid grid-cols-4">
         {

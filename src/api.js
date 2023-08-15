@@ -16,7 +16,7 @@ const fecthQuotes = async () => {
     throw (errorObj);
   }
   const data = await response.json();
-  return data;
+  return data[0];
 };
 
 export default fecthQuotes;
