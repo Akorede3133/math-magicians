@@ -1,5 +1,6 @@
 const Home = () => (
-  <div className="w-[90%] mx-auto md:w-[95%] py-5">
+  <div className="w-[90%] mx-auto md:w-[95%]">
+    <h2 className=" text-4xl py-5">Welcome to our page!</h2>
     <p className="text-sm tracking-widest leading-5 text-justify">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       Esse fuga maiores exercitationem iusto molestias expedita,
