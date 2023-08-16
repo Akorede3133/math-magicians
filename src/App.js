@@ -1,40 +1,23 @@
-import { useEffect, useState } from 'react';
-import Calculator from './components/Calculator';
-import fecthQuotes from './api';
-import Loading from './components/Loading';
+import {
+  createBrowserRouter, createRoutesFromElements, Route, RouterProvider,
+} from 'react-router-dom';
+import Calculator from './pages/Calculator';
+import Layout from './pages/Layout';
+import Home from './pages/Home';
 import Error from './components/Error';
-import Quotes from './components/Quotes';
+import Quotes, { loader } from './pages/Quotes';
 
-const App = () => {
-  const [quote, setQuote] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const retrieveData = async () => {
-    setLoading(true);
-    try {
-      const data = await fecthQuotes();
-      setQuote(data[0]);
-    } catch (error) {
-      setError(error);
-    } finally {
-      setLoading(false);
-    }
-  };
-  useEffect(() => {
-    retrieveData();
-  }, []);
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <Error message={error} />;
-  }
-  return (
-    <div className="bg-red-500 w-full min-h-screen py-20">
-      <Calculator />
-      {quote && <Quotes value={quote} />}
-    </div>
-  );
-};
+const router = createBrowserRouter(createRoutesFromElements(
+  <Route path="/" element={<Layout />}>
+    <Route index element={<Home />} />
+    <Route path="calculator" element={<Calculator />} />
+    <Route path="quote" element={<Quotes />} loader={loader} errorElement={<Error />} />
+  </Route>,
+));
+const App = () => (
+  <div className="w-full min-h-screen">
+    <RouterProvider router={router} />
+  </div>
+);
 
 export default App;

@@ -1,14 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
-const Error = ({ message }) => (
-  <div className=" p-2 text-white text-5xl">
-    Error:
-    {message?.message}
+const Error = () => (
+  <div className=" p-2 text-black text-3xl py-5">
+    <p>Failed to fetch quote</p>
   </div>
 );
 
-Error.propTypes = {
-  message: PropTypes.string.isRequired,
-};
 export default Error;
